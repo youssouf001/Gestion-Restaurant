@@ -1,0 +1,92 @@
+/*=============================================================================
+        Variables CSS
+===============================================================================*/
+:root {
+  --primary-color: #d4af37; /* Doré */
+  --secondary-color: #0f172a; /* Bleu foncé */
+  --accent-color: #e74c3c; /* Rouge */
+  --text-dark: #0f172a;
+  --text-primary: var(--primary-color);
+  --text-light: #7f8c8d;
+  --bg-light: #f9fafb;
+}
+
+/*=============================================================================
+        Styles généraux
+===============================================================================*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  color: var(--text-primary);
+  line-height: 1.6;
+}
+
+h1 h2 h3 h4 h5 h6 {
+  font-family: "Playfair Display", serif;
+  font-weight: 700;
+}
+
+/* ============================================================================
+        Navigation (Bootstrap 5)
+===============================================================================*/
+#mainNav {
+  transition: box-shadow 0.3s ease;
+  padding: 0.5rem 0;
+  background-color: #0f172a;
+}
+
+/* Personnalisation du logo */
+.navbar-brand {
+  font-family: "Playfair Display", serif;
+  font-size: 1.8rem;
+  color: var(--secondary-color) !important;
+}
+
+.navbar-brand:hover {
+  color: #fff !important;
+}
+
+.navbar-brand .text-primary {
+  color: var(--primary-color) !important;
+}
+
+/* Personnalisation des liens */
+.nav-link {
+  color: var(--text-primary) !important;
+  font-weight: 500;
+  font-size: 1rem;
+  padding: 0.5rem 1rem !important;
+  transition: color 0.3s ease;
+  text-emphasis: none;
+}
+
+.nav-link:hover,
+.nav-link:focus,
+.nav-link:active {
+  color: var(--bg-light) !important;
+}
+
+/* Effet du scroll */
+#mainNav.scrolled {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0, 1) !important;
+}
+
+/* Mobile Hamburger menu */
+@media (max-width: 991px) {
+  .navbar-collapse {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0, 1);
+  }
+
+  .nav-item {
+    margin: 0.5rem 0;
+  }
+}
