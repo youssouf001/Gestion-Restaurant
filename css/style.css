@@ -1,8 +1,11 @@
+/*==================Variable CSS ========================*/
 :root {
   --primary: #b87333; /* Doré luxe */
   --dark: #0f172a; /* Bleu nuit */
 }
+/*=======================================================*/
 
+/*================ Navigation ===========================*/
 /* NAVBAR BASE */
 #mainNav {
   background: #0f172a;
@@ -20,7 +23,6 @@
 
 /* LOGO */
 .navbar-brand {
-  font-size: 5px;
   color: var(--primary) !important;
   letter-spacing: 1px;
   transition: color 0.3s;
@@ -59,3 +61,4 @@
 .nav-link.active {
   color: white !important;
 }
+/*=================== Header ============================*/
