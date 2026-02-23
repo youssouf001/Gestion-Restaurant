@@ -3,7 +3,6 @@
   --primary: #b87333; /* Doré luxe */
   --dark: #0f172a; /* Bleu nuit */
 }
-/*=======================================================*/
 
 /*================ Navigation ===========================*/
 /* NAVBAR BASE */
@@ -26,6 +25,7 @@
   color: var(--primary) !important;
   letter-spacing: 1px;
   transition: color 0.3s;
+  font-family: "Plaiyfair Displaiy", serif;
 }
 
 /* LIENS */
@@ -61,4 +61,5 @@
 .nav-link.active {
   color: white !important;
 }
+
 /*=================== Header ============================*/

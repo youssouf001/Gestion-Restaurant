@@ -6,8 +6,7 @@ window.addEventListener("scroll", () => {
   let current = "";
 
   sections.forEach((section) => {
-    const sectionTop = section.offsetTop - 120;
-    const sectionheight = section.clientHeight;
+    const sectionTop = section.offsetTop - 130;
 
     if (pageYOffset >= sectionTop) {
       current = section.getAttribute("id");
