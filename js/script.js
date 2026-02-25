@@ -1,5 +1,5 @@
 // Activation du lien
-const sections = document.querySelectorAll("section");
+const sections = document.querySelectorAll("section, header");
 const navLinks = document.querySelectorAll(".nav-link");
 
 window.addEventListener("scroll", () => {
