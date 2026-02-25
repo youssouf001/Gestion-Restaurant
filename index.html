@@ -57,7 +57,13 @@
             </li>
 
             <li class="nav-item">
-              <a class="nav-link" href="#menu">Menu</a>
+              <a
+                class="nav-link"
+                href="#menu"
+                data-bs-toggle="modal"
+                data-bs-target="#menuModal"
+                >Menu</a
+              >
             </li>
 
             <li class="nav-item">
@@ -129,9 +135,40 @@
         </div>
       </div>
     </header>
+    <!-- Modal menu / Menu en pop up -->
+    <div class="modal fade" id="menuModal" tabindex="-1">
+      <div class="modal-dialog modal-xl modal-dialog-centered">
+        <div class="modal-content menu-popup">
+          <!-- Bouton fermer -->
+          <button
+            type="button"
+            class="btn-close close-btn"
+            data-bs-dismiss="modal"
+          ></button>
+
+          <div class="modal-body p-5">
+            <h2 class="text-center mb-4">Notre menu</h2>
+            <h5 class="section-title text-center">Entrée</h5>
+            <div class="row g-4 justify-content-center">
+              <div class="col-md-3">
+                <div class="menu-card">
+                  <img src="./images/salade cesar.jpeg" class="img-fluid" />
+                  <div class="menu-info">Salade César</div>
+                </div>
+              </div>
+              <div class="col-md-3">
+                <div class="menu-card">
+                  <img src="./images/Nems .jpeg" class="img-fluid" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <main></main>
     <footer></footer>
-    <!-- Bootstrap js-->
+    <!-- Bootstrap js & script.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/script.js"></script>
   </body>
