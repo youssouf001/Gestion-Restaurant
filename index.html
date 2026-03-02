@@ -9,10 +9,11 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Open+Sans:ital,wght@0,500;1,500&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Instrument+Serif:ital@0;1&family=Open+Sans:ital,wght@0,500;1,500&family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Playfair+Display:ital,wght@1,400..900&display=swap"
       rel="stylesheet"
     />
     <title>Seen Resto</title>
@@ -59,7 +60,7 @@
             <li class="nav-item">
               <a
                 class="nav-link"
-                href="#menu"
+                role="button"
                 data-bs-toggle="modal"
                 data-bs-target="#menuModal"
                 >Menu</a
@@ -135,30 +136,322 @@
         </div>
       </div>
     </header>
-    <!-- Modal menu / Menu en pop up -->
-    <div class="modal fade" id="menuModal" tabindex="-1">
-      <div class="modal-dialog modal-xl modal-dialog-centered">
+    <!-- Modal menu -->
+    <div
+      class="modal fade"
+      id="menuModal"
+      tabindex="-1"
+      aria-labelledby="menuModalLabel"
+      aria-hidden="true"
+    >
+      <div
+        class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable"
+      >
         <div class="modal-content menu-popup">
           <!-- Bouton fermer -->
           <button
             type="button"
-            class="btn-close close-btn"
+            class="btn-close"
             data-bs-dismiss="modal"
+            aria-label="Close"
           ></button>
 
-          <div class="modal-body p-5">
-            <h2 class="text-center mb-4">Notre menu</h2>
-            <h5 class="section-title text-center">Entrée</h5>
-            <div class="row g-4 justify-content-center">
-              <div class="col-md-3">
-                <div class="menu-card">
-                  <img src="./images/salade cesar.jpeg" class="img-fluid" />
-                  <div class="menu-info">Salade César</div>
+          <!-- Titre du menu -->
+          <div class="modal-header border-0 pb-0">
+            <h2 class="modal-title w-100 text-center" id="menuModalLabel">
+              Notre Menu
+            </h2>
+          </div>
+
+          <!-- Onglets de Catégories -->
+          <ul
+            class="nav nav-tabs justify-content-center mb-4"
+            id="menuTabs"
+            role="tablist"
+          >
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link active"
+                id="entrees-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#entrees"
+                type="button"
+                role="tab"
+              >
+                Entrées
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="plats-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#plats"
+                type="button"
+                role="tab"
+              >
+                Plats Principaux
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="desserts-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#desserts"
+                type="button"
+                role="tab"
+              >
+                Desserts
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button
+                class="nav-link"
+                id="boissons-tab"
+                data-bs-toggle="tab"
+                data-bs-target="#boissons"
+                type="button"
+                role="tab"
+              >
+                Boissons
+              </button>
+            </li>
+          </ul>
+
+          <!-- Contenu des Onglets -->
+          <div class="modal-body">
+            <div class="tab-content" id="menuTabContent">
+              <!-- tableau 1 : Entrée -->
+              <div
+                class="tab-pane fade show active"
+                id="entrees"
+                role="tabpanel"
+              >
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Salade Cesar.png"
+                        class="menu-img"
+                        alt="Salade César"
+                      />
+                      <div class="menu-info">
+                        <h5>Salade César</h5>
+                        <p>
+                          Salade fraîche romaine, parmesan, croûtons
+                          croustillants et sauce César maison.
+                        </p>
+                        <span class="prix">3 500 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Neem.png"
+                        class="menu-img"
+                        alt="Nems"
+                      />
+                      <div class="menu-info">
+                        <h5>Nems Croustillants</h5>
+                        <p>
+                          Nems aux légumes frais et viande, servis avec sauce
+                          aigre-douce.
+                        </p>
+                        <span class="price">2 500 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/soupe marocaine.png"
+                        class="menu-img"
+                        alt="Soupe"
+                      />
+                      <div class="menu-info">
+                        <h5>Soupe marocaine</h5>
+                        <p>
+                          Soupe chaude préparée avec les ingrédients de saison.
+                        </p>
+                        <span class="price">2 000 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
-              <div class="col-md-3">
-                <div class="menu-card">
-                  <img src="./images/Nems .jpeg" class="img-fluid" />
+
+              <!-- tableau 2 : Plats principaux -->
+              <div class="tab-pane fade" id="plats" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Thiebou dieun.png"
+                        class="menu-img"
+                        alt="Thiébou Dieune"
+                      />
+                      <div class="menu-info">
+                        <h5>Thiébou Dieune</h5>
+                        <p>
+                          Plat national du Sénégal, riz parfumé cuit dans une
+                          sauce tomate, poisson frais et légumes.
+                        </p>
+                        <span class="price">5 000 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/yassa au poulet.png"
+                        class="menu-img"
+                        alt="Yassa Poulet"
+                      />
+                      <div class="menu-info">
+                        <h5>Yassa au Poulet</h5>
+                        <p>
+                          Poulet mariné au citron et oignons, équilibre parfait
+                          entre acidité et saveurs épicées.
+                        </p>
+                        <span class="price">6 000 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Maffe.png"
+                        class="menu-img"
+                        alt="Mafé"
+                      />
+                      <div class="menu-info">
+                        <h5>Mafé</h5>
+                        <p>
+                          Spécialité sénégalaise à base de pâte d'arachide,
+                          viande tendre et épices, riz blanc.
+                        </p>
+                        <span class="price">3 000 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tableau 3 : Desserts -->
+              <div class="tab-pane fade" id="desserts" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Thiakry.jpeg"
+                        class="menu-img"
+                        alt="Thiakry"
+                      />
+                      <div class="menu-info">
+                        <h5>Thiakry</h5>
+                        <p>
+                          Dessert sénégalais à base de couscous, lait caillé,
+                          crème et vanille.
+                        </p>
+                        <span class="price">1 500 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Crêpes au chocolat_.jpeg"
+                        class="menu-img"
+                        alt="Crêpes au chocolat"
+                      />
+                      <div class="menu-info">
+                        <h5>Crêpes au chocolat</h5>
+                        <p>
+                          Délicieuses crêpes roulées nappées de chocolat
+                          fondant.
+                        </p>
+                        <span class="price">2 000 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Tiramisu .jpeg"
+                        class="menu-img"
+                        alt="Tiramisu"
+                      />
+                      <div class="menu-info">
+                        <h5>Tiramisu</h5>
+                        <p>Dessert italien classique au café et mascarpone.</p>
+                        <span class="price">2 500 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- tableau 4 : Boissons -->
+              <div class="tab-pane fade" id="boissons" role="tabpanel">
+                <div class="row g-4 justify-content-center">
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Bissap.png"
+                        class="menu-img"
+                        alt="Bissap"
+                      />
+                      <div class="menu-info">
+                        <h5>Jus de Bissap</h5>
+                        <p>
+                          Boisson traditionnelle sénégalaise à base de fleurs
+                          d'hibiscus.
+                        </p>
+                        <span class="price">1 000 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Bouye.png"
+                        class="menu-img"
+                        alt="Bouye"
+                      />
+                      <div class="menu-info">
+                        <h5>Jus de Bouye</h5>
+                        <p>Jus de pain de singe, riche en vitamine C.</p>
+                        <span class="price">1 200 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6 col-lg-4">
+                    <div class="menu-card">
+                      <img
+                        src="./images/Cafe.jpeg"
+                        class="menu-img"
+                        alt="Café Touba"
+                      />
+                      <div class="menu-info">
+                        <h5>Café Touba</h5>
+                        <p>
+                          Café sénégalais épicé au poivre de Guinée et clous de
+                          girofle.
+                        </p>
+                        <span class="price">500 FCFA</span>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -168,8 +461,13 @@
     </div>
     <main></main>
     <footer></footer>
+    <!-- aos.js -->
     <!-- Bootstrap js & script.js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="/js/script.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
   </body>
 </html>
