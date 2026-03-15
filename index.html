@@ -692,9 +692,11 @@
                 <label for="message" class="form-label"
                   >Commentaire ou demandes spéciales</label
                 >
-                <textarea class="form-control" rows="4">
-            Allergies, préférences de tables, occasion spéciales...</textarea
-                >
+                <textarea
+                  class="form-control"
+                  rows="4"
+                  placeholder="Allergies, préférences de tables, occasion spéciales..."
+                ></textarea>
               </div>
               <div class="col-12">
                 <button type="submit" class="btn btn-primary w-100 py-3">
@@ -702,6 +704,164 @@
                 </button>
               </div>
             </form>
+          </div>
+        </div>
+      </section>
+      <!-- Témoignages -->
+      <section class="temoignage-section py-4" id="temoignage">
+        <div class="temoignage-header" data-aos="fade-up" data-aos-delay="100">
+          <div class="temoignage-container">
+            <!-- Titre -->
+            <div class="text-center mb-5" data-aos="fade-up">
+              <h2 class="temoignage-title">Témoignages</h2>
+              <p class="temoignage-subtitle">
+                La satisfaction de nos client est notre priorité
+              </p>
+            </div>
+            <!-- les temoignages des clients -->
+            <div
+              class="testimonials-carousel"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <button class="carousel-btn carousel-btn-prev" id="prevBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="15 18 9 12 15 6"></polyline>
+                </svg>
+              </button>
+              <!-- Contenue des temoignages -->
+              <div class="testimonials-wrapper">
+                <div class="testimonials-track" id="testimonialsTrack">
+                  <!-- 1er temoignage -->
+                  <div class="testimonials-card">
+                    <div class="testimonial-header">
+                      <img
+                        src="./images/Client1.png"
+                        alt="Fatou Diallo"
+                        class="testimonials-photo"
+                      />
+                      <div class="testimonials-info">
+                        <h5 class="testimonials-name">Fatou Diallo</h5>
+                        <div class="testimonials-stars">
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="testimonials-text">
+                      "Une expérience culinaire exceptionnelle ! Les plats sont
+                      délicieux et le service est impeccable. Je recommande
+                      vivement !"
+                    </p>
+                  </div>
+                  <!-- 2eme temoignage -->
+                  <div class="testimonials-card">
+                    <div class="testimonial-header">
+                      <img
+                        src="./images/Client2.png"
+                        alt="Mamadou Sy"
+                        class="testimonials-photo"
+                      />
+                      <div class="testimonials-info">
+                        <h5 class="testimonials-name">Mamadou Sy</h5>
+                        <div class="testimonials-stars">
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="testimonials-text">
+                      "Le thiébou dieune est authentique et savoureux.
+                      L'ambiance chaleureuse nous fait sentir comme à la
+                      maison."
+                    </p>
+                  </div>
+                  <!-- 3eme temoignage -->
+                  <div class="testimonials-card">
+                    <div class="testimonial-header">
+                      <img
+                        src="./images/Client3.png"
+                        alt="Aïssatou Ba"
+                        class="testimonials-photo"
+                      />
+                      <div class="testimonials-info">
+                        <h5 class="testimonials-name">Aïssatou Ba</h5>
+                        <div class="testimonials-stars">
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="testimonials-text">
+                      "Service rapide et attentionné. Les desserts sont à tomber
+                      ! Un restaurant que je visite régulièrement."
+                    </p>
+                  </div>
+                  <!-- Témoignage 4 (optionnel) -->
+                  <div class="testimonials-card">
+                    <div class="testimonial-header">
+                      <img
+                        src="./images/Client2.png"
+                        alt="Ousmane Diop"
+                        class="testimonial-photo"
+                      />
+                      <div class="testimonials-info">
+                        <h5 class="testimonials-name">Ousmane Diop</h5>
+                        <div class="testimonials-stars">
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                          <i class="star-icon">⭐</i>
+                        </div>
+                      </div>
+                    </div>
+                    <p class="testimonials-text">
+                      "Excellent rapport qualité-prix. La cuisine est
+                      authentique et généreuse. Le cadre est élégant et parfait
+                      pour des dîners en famille ou entre amis. Bravo à toute
+                      l'équipe !"
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- flèche droite -->
+              <button class="carousel-btn carousel-btn-next" id="nextBtn">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                >
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <!-- Points indicateurs -->
+            <div class="carousel-indicator" id="carouselIndicator">
+              <span class="indicator active" data-slide="0"></span>
+              <span class="indicator" data-slide="1"></span>
+              <span class="indicator" data-slide="2"></span>
+            </div>
           </div>
         </div>
       </section>
