@@ -175,3 +175,42 @@ document.addEventListener("DOMContentLoaded", function () {
   // Initialiser
   updateSlider();
 });
+
+//============ Validation du formulaire =====================
+(function () {
+  "use strict";
+
+  const forms = document.querySelectorAll(".needs-validations");
+
+  forms.forEach((form) => {
+    form.addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      if (!form.checkValidity()) {
+        event.stopPropagation();
+
+        Swal.fire({
+          icon: "error",
+          title: "Formulaire incomplet",
+          text: "Veuillez remplir correctement tous les champs.",
+          confirmButtonColor: "#b87333",
+        });
+
+        form.classList.add("was-validated");
+        return;
+      }
+
+      // popup de confirmation
+      Swal.fire({
+        icon: "success",
+        title: "Message envoyé !",
+        text: "Nous vous contacterons très bientôt.",
+        confirmButtonColor: "#b87333",
+        confirmButtonText: "OK",
+      });
+
+      form.reset();
+      form.classList.remove("was-validated");
+    });
+  });
+})();
